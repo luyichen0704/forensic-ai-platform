@@ -350,6 +350,47 @@ MIT License - 详见 [LICENSE](LICENSE)
 
 ---
 
+## 🔄 项目更新
+
+### 一键更新（推荐）
+
+**Windows用户:**
+```bash
+update.bat
+```
+
+**Linux/Mac用户:**
+```bash
+chmod +x update.sh
+./update.sh
+```
+
+### 手动更新
+
+```bash
+# 拉取最新代码
+git pull origin main
+
+# 更新依赖
+pip install -r requirements.txt
+```
+
+### 检查更新
+
+```bash
+python scripts/updater.py --check
+```
+
+### 更新脚本功能
+
+- ✅ 自动检测是否有新版本
+- ✅ 显示更新内容（git log）
+- ✅ 支持暂存本地修改（git stash）
+- ✅ 自动更新Python依赖
+- ✅ 版本号管理（VERSION文件）
+
+---
+
 ## 贡献
 
 欢迎提交Issue和Pull Request！
