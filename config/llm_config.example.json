@@ -1,0 +1,30 @@
+{
+  "providers": {
+    "openai": {
+      "api_key": "your-openai-api-key",
+      "model": "gpt-4",
+      "base_url": "https://api.openai.com/v1"
+    },
+    "claude": {
+      "api_key": "your-claude-api-key",
+      "model": "claude-3-sonnet-20240229"
+    },
+    "ollama": {
+      "model": "llama2",
+      "base_url": "http://localhost:11434"
+    }
+  },
+  "default_provider": "openai",
+  "max_retries": 3,
+  "timeout": 30,
+  "embedding_model": "all-MiniLM-L6-v2",
+  "knowledge_base": {
+    "skills_dir": "skills/",
+    "vector_db": "chroma",
+    "collection_name": "forensic_skills"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/app.log"
+  }
+}

@@ -1,0 +1,53 @@
+# 基于大模型的自动化取证平台 - 依赖包
+
+# 核心依赖
+aiohttp>=3.9.0
+asyncio-mqtt>=0.16.0
+
+# 向量数据库和嵌入模型
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.4
+chromadb>=0.4.0
+
+# 数据处理
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Web框架 (可选)
+gradio>=4.0.0
+fastapi>=0.100.0
+uvicorn>=0.23.0
+
+# 取证工具绑定
+python-magic>=0.4.27
+pytsk3>=20230125
+dissect-evidence>=3.0.0
+
+# 文件处理
+chardet>=5.0.0
+python-docx>=0.8.11
+openpyxl>=3.1.0
+PyPDF2>=3.0.0
+
+# 加密解密
+pycryptodome>=3.18.0
+cryptography>=41.0.0
+
+# 网络分析
+scapy>=2.5.0
+dpkt>=1.9.8
+
+# 日志和配置
+pyyaml>=6.0
+python-dotenv>=1.0.0
+loguru>=0.7.0
+
+# 开发工具
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.4.0
+
+# 可选依赖 - 高性能计算
+# torch>=2.0.0
+# transformers>=4.30.0
