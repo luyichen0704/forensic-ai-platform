@@ -1,0 +1,467 @@
+[
+  {
+    "knowledge_id": "sleuthkit_blkcalc",
+    "title": "TSK blkcalc",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "blkcalc \\- Converts between unallocated disk unit numbers and regular\ndisk unit numbers.  \n.SH SYNOPSIS\n.B blkcalc [-dsu unit_addr] [-vV] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-f fstype] image [images]\n.SH DESCRIPTION\n.B blkcalc\ncreates a disk unit number mapping between two images, one normal and \nanother that only contains the unallocated units of the first (the\ndefault behavior of the \n.B blkls(1)\nprogram).  One of the \n.B -d, -s,  \nor \n.B -u \noptions must be given.  If the \n.B -d",
+    "commands": [
+      ".B blkcalc [-dsu unit_addr] [-vV] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-f fstype] image [images] .SH DESCRIPTION .B blkcalc creates a disk unit number mapping between two images, one norm"
+    ],
+    "use_cases": [
+      "blkcalc \\- Converts between unallocated disk unit "
+    ],
+    "examples": [
+      "blkls"
+    ],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_blkcat",
+    "title": "TSK blkcat",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "blkcat \\- Display the contents of file system data unit in a disk image.\n.SH SYNOPSIS\n.B blkcat [-ahswvV] [-f fstype] [-u unit_size] [-i imgtype] [-o imgoffset] [-b dev_sector_size] \n.I image [images] unit_addr [num]\n\n.SH DESCRIPTION\n.B blkcat\ndisplays \n.B num \ndata units (default is one) starting at the unit address\n.B unit_addr\nfrom\n.B image\nto stdout in different formats (default is raw).\n.B blkcat\nwas called \n.B dcat\nin TSK versions prior to 3.0.0.\n\n.SH ARGUMENTS\n.IP -a",
+    "commands": [
+      ".B blkcat [-ahswvV] [-f fstype] [-u unit_size] [-i imgtype] [-o imgoffset] [-b dev_sector_size]  .I image [images] unit_addr [num]  .SH DESCRIPTION .B blkcat displays  .B num  data units (default is o"
+    ],
+    "use_cases": [
+      "blkcat \\- Display the contents of file system data"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_blkls",
+    "title": "TSK blkls",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "blkls \\- List or output file system data units.\n.SH SYNOPSIS\n.B blkls [-aAelsvV] [-f \n.I fstype\n.B ] [-i \n.I imgtype\n.B ] [-o \n.I imgoffset\n.B ]\n.I [-b dev_sector_size]  image [images] [start-stop]\n\n.SH DESCRIPTION\n.B blkls\nopens the named \n.I image(s)\nand copies file system data units (blocks).  By default, \n.B blkls\ncopies the contents of unallocated data blocks.  \n.B blkls \nwas called \n.B dls\nin TSK versions prior to 3.0.0.\n.B blkls \nwas called \n.B unrm\nin TCT.  \n\n.SH ARGUMENTS\n.IP -e",
+    "commands": [
+      ".B blkls [-aAelsvV] [-f  .I fstype .B ] [-i  .I imgtype .B ] [-o  .I imgoffset .B ] .I [-b dev_sector_size]  image [images] [start-stop]  .SH DESCRIPTION .B blkls opens the named  .I image(s) and copi"
+    ],
+    "use_cases": [
+      "查看数据块",
+      "分析未分配空间",
+      "恢复文件碎片"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_blkstat",
+    "title": "TSK blkstat",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "blkstat \\- Display details of a file system data unit (i.e. block or sector)\n.SH SYNOPSIS\n.B blkstat [-f\n.I fstype \n.B ] [-i imgtype] [-o imgoffset] [-b dev_sector_size]  [-vV] \n.I image [images] addr\n.SH DESCRIPTION\n.B blkstat\ndisplays the allocation status of the given data unit.\n.B blkstat\nwas called \n.B dstat\nin TSK versions prior to 3.0.0.\n\n.SH ARGUMENTS\n.IP \"-f fstype\"",
+    "commands": [
+      ".B blkstat [-f .I fstype  .B ] [-i imgtype] [-o imgoffset] [-b dev_sector_size]  [-vV]  .I image [images] addr .SH DESCRIPTION .B blkstat displays the allocation status of the given data unit. .B blks"
+    ],
+    "use_cases": [
+      "blkstat \\- Display details of a file system data u"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_fcat",
+    "title": "TSK fcat",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "fcat \\- Output the contents of a file based on its name.\n.SH SYNOPSIS\n.B fcat [-hRsvV] [-f\n.I fstype\n.B ] [-i\n.I imgtype\n.B ] [-o \n.I imgoffset\n.B ] [-b dev_sector_size] \n.I path_of_file image [images] \n.SH DESCRIPTION\n.B fcat\nopens the named \n.I image(s)\nand copies the file at the path\n.I path_of_file\nto standard output.\n\n.SH ARGUMENTS\n.IP \"-f fstype\"",
+    "commands": [
+      ".B fcat [-hRsvV] [-f .I fstype .B ] [-i .I imgtype .B ] [-o  .I imgoffset .B ] [-b dev_sector_size]  .I path_of_file image [images]  .SH DESCRIPTION .B fcat opens the named  .I image(s) and copies the"
+    ],
+    "use_cases": [
+      "fcat \\- Output the contents of a file based on its"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_ffind",
+    "title": "TSK ffind",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "ffind \\- Finds the name of the file or directory using a given inode\n.SH SYNOPSIS\n.B ffind [-aduvV] [-f fstype] [-i imgtype] [-o imgoffset] [-b dev_sector_size] \n.I image [images] inode\n.SH DESCRIPTION\n.B ffind\nfinds the names of files or directories that are allocated to \n.I inode\non disk image \n.I image.",
+    "commands": [
+      ".B ffind [-aduvV] [-f fstype] [-i imgtype] [-o imgoffset] [-b dev_sector_size]  .I image [images] inode .SH DESCRIPTION .B ffind finds the names of files or directories that are allocated to  .I inode"
+    ],
+    "use_cases": [
+      "查找文件名",
+      "根据inode找文件",
+      "定位文件位置"
+    ],
+    "examples": [
+      "ffind"
+    ],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_fls",
+    "title": "TSK fls",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "fls \\- List file and directory names in a disk image.\n.SH SYNOPSIS\n.B fls [-adDFlpruvV] [-m\n.I mnt\n.B ] [-z\n.I zone\n.B ] [-f\n.I fstype\n.B ] [-s\n.I seconds\n.B ] [-i \n.I imgtype\n.B ] [-o \n.I imgoffset\n.B ] [-b dev_sector_size]  \n.I image [images] \n.B [\n.I inode\n.B ]\n.SH DESCRIPTION\n.B fls\nlists the files and directory names in the\n.I image\nand can display file names of recently deleted files for the directory\nusing the given\n.I inode.",
+    "commands": [
+      ".B fls [-adDFlpruvV] [-m .I mnt .B ] [-z .I zone .B ] [-f .I fstype .B ] [-s .I seconds .B ] [-i  .I imgtype .B ] [-o  .I imgoffset .B ] [-b dev_sector_size]   .I image [images]  .B [ .I inode .B ] .S"
+    ],
+    "use_cases": [
+      "列出文件系统内容",
+      "恢复删除文件",
+      "查看文件时间线"
+    ],
+    "examples": [
+      "fls",
+      "fls"
+    ],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_fsstat",
+    "title": "TSK fsstat",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "fsstat \\- Display general details of a file system\n.SH SYNOPSIS\n.B  fsstat [-f \n.I fstype \n.B ] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-tvV] \n.I image [images] \n.SH DESCRIPTION\n.B fsstat\ndisplays the details associated with a file system.  The output of this\ncommand is file system specific.  At a minimum, the range of meta-data\nvalues (inode numbers) and content units (blocks or clusters) are given.",
+    "commands": [
+      ".B  fsstat [-f  .I fstype  .B ] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-tvV]  .I image [images]  .SH DESCRIPTION .B fsstat displays the details associated with a file system.  The output of"
+    ],
+    "use_cases": [
+      "fsstat \\- Display general details of a file system"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_hfind",
+    "title": "TSK hfind",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "hfind \\- Lookup a hash value in a hash database\n.SH SYNOPSIS\n.B hfind [-i\n.I db_type\n.B ] [-f\n.I lookup_file\n.B ] [-eq] \n.I db_file [hashes]\n.SH DESCRIPTION\n.B hfind\nlooks up hash values in a database using a binary search algorithm.",
+    "commands": [
+      ".B hfind [-i .I db_type .B ] [-f .I lookup_file .B ] [-eq]  .I db_file [hashes] .SH DESCRIPTION .B hfind looks up hash values in a database using a binary search algorithm."
+    ],
+    "use_cases": [
+      "查找哈希值",
+      "哈希匹配",
+      "文件校验"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_icat",
+    "title": "TSK icat",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "icat \\- Output the contents of a file based on its inode number.\n.SH SYNOPSIS\n.B icat [-hrsvV] [-f\n.I fstype\n.B ] [-i\n.I imgtype\n.B ] [-o \n.I imgoffset\n.B ] [-b dev_sector_size] \n.I image [images] inode \n.SH DESCRIPTION\n.B icat\nopens the named \n.I image(s)\nand copies the file with the specified \n.I inode\nnumber to standard output.\n\n.SH ARGUMENTS\n.IP \"-f fstype\"",
+    "commands": [
+      ".B icat [-hrsvV] [-f .I fstype .B ] [-i .I imgtype .B ] [-o  .I imgoffset .B ] [-b dev_sector_size]  .I image [images] inode  .SH DESCRIPTION .B icat opens the named  .I image(s) and copies the file w"
+    ],
+    "use_cases": [
+      "提取文件内容",
+      "恢复特定文件",
+      "查看文件数据"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_ifind",
+    "title": "TSK ifind",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "ifind \\- Find the meta-data structure that has allocated a given \ndisk unit or file name.\n.SH SYNOPSIS\n.B ifind [-avVl] [-f fstype] [-d data_unit] \n.B [-n file] [-p par_inode] [-z ZONE] [-i imgtype] [-o imgoffset] [-b dev_sector_size] \n.I image [images]\n.SH DESCRIPTION\n.B ifind\nfinds the meta-data structure that has \n.I data_unit\nallocated a data unit or has a given file name.  In some cases\nany of the structures can be unallocated and this will still find\nthe results.  \n\n.SH ARGUMENTS",
+    "commands": [
+      ".B ifind [-avVl] [-f fstype] [-d data_unit]  .B [-n file] [-p par_inode] [-z ZONE] [-i imgtype] [-o imgoffset] [-b dev_sector_size]  .I image [images] .SH DESCRIPTION .B ifind finds the meta-data stru"
+    ],
+    "use_cases": [
+      "ifind \\- Find the meta-data structure that has all"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_ils",
+    "title": "TSK ils",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "ils \\- List inode information\n.SH SYNOPSIS\n.B ils [-emOpvV] [-f \n.I fstype\n.B ] [-s \n.I seconds\n.B ] [-i\n.I imgtype\n.B ] [-o\n.I imgoffset\n.B ] [-b dev_sector_size] \n.I image [images] [start-stop]\n\n.B ils [-aAlLvVzZ] [-f\n.I fstype\n.B ] [-s\n.I seconds\n.B ] [-i\n.I imgtype\n.B ] [-o\n.I imgoffset\n.B ]\n.I image [images] [start-stop]\n.SH DESCRIPTION\n.B ils\nopens the named \n.I image(s)\nand lists inode information. By default, \n.B ils\nlists only the inodes of removed files.",
+    "commands": [
+      ".B ils [-emOpvV] [-f  .I fstype .B ] [-s  .I seconds .B ] [-i .I imgtype .B ] [-o .I imgoffset .B ] [-b dev_sector_size]  .I image [images] [start-stop]  .B ils [-aAlLvVzZ] [-f .I fstype .B ] [-s .I s"
+    ],
+    "use_cases": [
+      "列出inode信息",
+      "查看文件元数据",
+      "分析文件属性"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_img_cat",
+    "title": "TSK img_cat",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "img_cat \\- Output contents of an image file.\n.SH SYNOPSIS\n.B img_cat [-i imgtype] [-b dev_sector_size] [-s start_sector] [-e stop_sector] [-vV] \n.I image [images] \n.SH DESCRIPTION\n.B img_cat\noutputs the contents of an image file.  Image files that are not raw will have embedded\ndata and metadata.  img_cat will output only the data.  This allows you to convert \nan embedded format to raw or to calculate the MD5 hash of the data by piping the output to\nthe appropriate tool. \n\n.SH ARGUMENTS\n.IP \"-i ",
+    "commands": [
+      ".B img_cat [-i imgtype] [-b dev_sector_size] [-s start_sector] [-e stop_sector] [-vV]  .I image [images]  .SH DESCRIPTION .B img_cat outputs the contents of an image file.  Image files that are not ra"
+    ],
+    "use_cases": [
+      "提取镜像数据",
+      "导出原始数据",
+      "转换镜像格式"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_img_stat",
+    "title": "TSK img_stat",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "img_stat \\- Display details of an image file\n.SH SYNOPSIS\n.B img_stat [-i imgtype] [-b dev_sector_size] [-tvV] \n.I image [images] \n.SH DESCRIPTION\n.B img_stat\ndisplays the details associated with an image file.  The output of this\ncommand is image format specific.  At a minimum, the size will be given \nand the byte range of each file will be given for split image formats.\n\n.SH ARGUMENTS\n.IP \"-i imgtype\"",
+    "commands": [
+      ".B img_stat [-i imgtype] [-b dev_sector_size] [-tvV]  .I image [images]  .SH DESCRIPTION .B img_stat displays the details associated with an image file.  The output of this command is image format spe"
+    ],
+    "use_cases": [
+      "查看镜像信息",
+      "分析镜像格式",
+      "验证镜像完整性"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_istat",
+    "title": "TSK istat",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "istat \\- Display details of a meta-data structure (i.e. inode)\n.SH SYNOPSIS\n.B  istat [-B \n.I num\n.B ] [-f\n.I fstype \n.B ] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-vV] [-z\n.I zone\n.B ] [-s\n.I seconds\n.B ]\n.I image [images] inode\n.SH DESCRIPTION\n.B istat\ndisplays the uid, gid, mode, size, link number, modified, accessed, \nchanged times, and all the disk units a structure has allocated.",
+    "commands": [
+      ".B  istat [-B  .I num .B ] [-f .I fstype  .B ] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-vV] [-z .I zone .B ] [-s .I seconds .B ] .I image [images] inode .SH DESCRIPTION .B istat displays the"
+    ],
+    "use_cases": [
+      "查看inode详情",
+      "分析文件时间",
+      "查看文件大小"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_jcat",
+    "title": "TSK jcat",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "jcat \\- Show the contents of a block in the file system journal.\n.SH SYNOPSIS\n.B jcat [-f\n.I fstype\n.B ] [-vV] [-i imgtype] [-o imgoffset] [-b dev_sector_size] \n.I image [images]\n.B ] [\n.I inode\n.B ]\n.I jblk\n\n.SH DESCRIPTION\n.B jcat\nshows the contents of a journal block in the file system journal.  The \ninode address of the journal can be given or the default location will\nbe used.  Note that the block address is a journal block address and not\na file system block.  The raw output is given to ST",
+    "commands": [
+      ".B jcat [-f .I fstype .B ] [-vV] [-i imgtype] [-o imgoffset] [-b dev_sector_size]  .I image [images] .B ] [ .I inode .B ] .I jblk  .SH DESCRIPTION .B jcat shows the contents of a journal block in the "
+    ],
+    "use_cases": [
+      "jcat \\- Show the contents of a block in the file s"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_jls",
+    "title": "TSK jls",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "jls \\- List the contents of a file system journal\n.SH SYNOPSIS\n.B jls [-f\n.I fstype\n.B ] [-vV]  [-i imgtype] [-o imgoffset] [-b dev_sector_size] \n.I image [images] [inode] \n\n.SH DESCRIPTION\n.B jls\nlists the records and entries in a file system journal.  If inode is given,\nthen it will look there for a journal.  Otherwise, it will use the\ndefault location.  The output lists the journal block number and a\ndescription.\n\n.SH ARGUMENTS\n.IP \"-f fstype\"",
+    "commands": [
+      ".B jls [-f .I fstype .B ] [-vV]  [-i imgtype] [-o imgoffset] [-b dev_sector_size]  .I image [images] [inode]   .SH DESCRIPTION .B jls lists the records and entries in a file system journal.  If inode "
+    ],
+    "use_cases": [
+      "jls \\- List the contents of a file system journal\n"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_mactime",
+    "title": "TSK mactime",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "mactime \\- Create an ASCII time line of file activity\n.SH SYNOPSIS\n.B  mactime [-b \n.I body\n.B ] [-g \n.I group file\n.B ] [-p \n.I password file\n.B ] [-i\n.I (day|hour) index file\n.B ] [-dhmVy] [-z\n.I TIME_ZONE\n.B ] [DATE_RANGE]\n.SH DESCRIPTION\n.B mactime\ncreates an ASCII time line of file activity based on the body file\nspecified by '\\-b' or from STDIN.  The time line is written to STDOUT.",
+    "commands": [
+      ".B  mactime [-b  .I body .B ] [-g  .I group file .B ] [-p  .I password file .B ] [-i .I (day|hour) index file .B ] [-dhmVy] [-z .I TIME_ZONE .B ] [DATE_RANGE] .SH DESCRIPTION .B mactime creates an ASC"
+    ],
+    "use_cases": [
+      "生成时间线",
+      "分析文件活动",
+      "事件关联"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_mmcat",
+    "title": "TSK mmcat",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "mmcat \\- Output the contents of a partition to stdout\n.SH SYNOPSIS\n.B mmcat [-t\n.I mmtype \n.B ] [-o\n.I offset\n.B ] [ -i\n.I imgtype\n.B ] [-b dev_sector_size]  [-vV] \n.I image [images] part_num\n.SH DESCRIPTION\n.B mmcat\noutputs the contents of a specific volume to stdout.  This allows you to\nextract the contents of a partition to a separate file.\n\n.SH ARGUMENTS\n.IP \"-t mmtype\"",
+    "commands": [
+      ".B mmcat [-t .I mmtype  .B ] [-o .I offset .B ] [ -i .I imgtype .B ] [-b dev_sector_size]  [-vV]  .I image [images] part_num .SH DESCRIPTION .B mmcat outputs the contents of a specific volume to stdou"
+    ],
+    "use_cases": [
+      "mmcat \\- Output the contents of a partition to std"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_mmls",
+    "title": "TSK mmls",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "mmls \\- Display the partition layout of a volume system  (partition tables)\n.SH SYNOPSIS\n.B mmls [-t\n.I mmtype \n.B ] [-o\n.I offset\n.B ] [ -i\n.I imgtype\n.B ] [-b dev_sector_size] [-BrvV]  [-aAmM]\n.I image [images]\n.SH DESCRIPTION\n.B mmls\ndisplays the layout of the partitions in a volume system, which include partition\ntables and disk labels.\n\n.SH ARGUMENTS\n.IP \"-t mmtype\"",
+    "commands": [
+      ".B mmls [-t .I mmtype  .B ] [-o .I offset .B ] [ -i .I imgtype .B ] [-b dev_sector_size] [-BrvV]  [-aAmM] .I image [images] .SH DESCRIPTION .B mmls displays the layout of the partitions in a volume sy"
+    ],
+    "use_cases": [
+      "查看分区表",
+      "分析磁盘布局",
+      "识别分区类型"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_mmstat",
+    "title": "TSK mmstat",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "mmstat \\- Display details about the volume system (partition tables)\n.SH SYNOPSIS\n.B mmstat [-t\n.I mmtype \n.B ] [-o\n.I offset\n.B ] [ -i\n.I imgtype\n.B ] [-b dev_sector_size] [-vV] \n.I image [images]\n.SH DESCRIPTION\n.B mmstat \ndisplays the general details of a volume system, which includes partition\ntables and disk labels.  Mainly, the type is given.\n\n.SH ARGUMENTS\n.IP \"-t mmtype\"",
+    "commands": [
+      ".B mmstat [-t .I mmtype  .B ] [-o .I offset .B ] [ -i .I imgtype .B ] [-b dev_sector_size] [-vV]  .I image [images] .SH DESCRIPTION .B mmstat  displays the general details of a volume system, which in"
+    ],
+    "use_cases": [
+      "mmstat \\- Display details about the volume system "
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_sigfind",
+    "title": "TSK sigfind",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "sigfind \\- Find a binary signature in a file\n.SH SYNOPSIS\n.B sigfind [-b\n.I bsize\n.B ] [-o\n.I offset\n.B ] [-t\n.I template\n.B ] [-lV] [\n.I hex_signature\n.B ]\n.I file\n\n.SH DESCRIPTION\n.B sigfind\nsearches through a file and looks for the hex_signature at a given offset.",
+    "commands": [
+      ".B sigfind [-b .I bsize .B ] [-o .I offset .B ] [-t .I template .B ] [-lV] [ .I hex_signature .B ] .I file  .SH DESCRIPTION .B sigfind searches through a file and looks for the hex_signature at a give"
+    ],
+    "use_cases": [
+      "查找文件签名",
+      "识别文件类型",
+      "文件雕刻"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_sorter",
+    "title": "TSK sorter",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "sorter \\- Sort files in an image into categories based on file type\n.SH SYNOPSIS\n.B [-b\n.I size\n.B ] [-e] [-E] [-h] [-l] [-md5] [-s] [-sha1] [-U] [-v] [-V] [-a\n.I hash_alert\n.B ] [-c \n.I config\n.B ] [-C \n.I config\n.B ] [-d\n.I dir\n.B ] [-m\n.I mnt\n.B ] [-n\n.I nsrl_db\n.B ] [-x\n.I hash_exclude\n.B ] [-i imgtype] [-o imgoffset] [-f fstype] image [image] [meta_addr]\n.SH DESCRIPTION\n.B sorter\nis a Perl script that analyzes a file system to organize the\nallocated and unallocated files by file type.  It r",
+    "commands": [
+      ".B [-b .I size .B ] [-e] [-E] [-h] [-l] [-md5] [-s] [-sha1] [-U] [-v] [-V] [-a .I hash_alert .B ] [-c  .I config .B ] [-C  .I config .B ] [-d .I dir .B ] [-m .I mnt .B ] [-n .I nsrl_db .B ] [-x .I has"
+    ],
+    "use_cases": [
+      "排序文件",
+      "分类文件",
+      "文件分析"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_tsk_comparedir",
+    "title": "TSK tsk_comparedir",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "tsk_comparedir - compare the contents of a directory with the contents of an image or local device. \n.SH SYNOPSIS\n.B tsk_comparedir [-vV] [-n\n.I start_inum\n.B ] [ -f\n.I fstype\n.B ] [ -i\n.I imgtype\n.B ] [ -b\n.I dev_sector_size\n.B ] [ -o\n.I sector_offset\n.B ]\n.I image [images] comparison_directory\n.SH DESCRIPTION\n.B tsk_comparedir \ncompares the contents of\n.I image\nto the contents of\n.I comparison_directory.",
+    "commands": [
+      ".B tsk_comparedir [-vV] [-n .I start_inum .B ] [ -f .I fstype .B ] [ -i .I imgtype .B ] [ -b .I dev_sector_size .B ] [ -o .I sector_offset .B ] .I image [images] comparison_directory .SH DESCRIPTION ."
+    ],
+    "use_cases": [
+      "tsk_comparedir - compare the contents of a directo"
+    ],
+    "examples": [
+      "tsk_comparedir"
+    ],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_tsk_gettimes",
+    "title": "TSK tsk_gettimes",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "tsk_gettimes - Collect MAC times from a disk image into a body file.\n.SH SYNOPSIS\n.B tsk_gettimes [-vV] [ -f\n.I fstype\n.B ] [ -i\n.I imgtype\n.B ] [ -b\n.I dev_sector_size\n.B ] [ -z\n.I zone\n.B ] [ -s\n.I seconds\n.B ] \n.I image [images]\n.SH DESCRIPTION\n.B tsk_gettimes\nexamines each of the file systems in a disk image and returns the data about them in the MACtime body format (the same as running 'fls -m' on each file system).  The output of this can be used as input to mactime to make a timeline of f",
+    "commands": [
+      ".B tsk_gettimes [-vV] [ -f .I fstype .B ] [ -i .I imgtype .B ] [ -b .I dev_sector_size .B ] [ -z .I zone .B ] [ -s .I seconds .B ]  .I image [images] .SH DESCRIPTION .B tsk_gettimes examines each of t"
+    ],
+    "use_cases": [
+      "tsk_gettimes - Collect MAC times from a disk image"
+    ],
+    "examples": [
+      "tsk_gettimes"
+    ],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_tsk_loaddb",
+    "title": "TSK tsk_loaddb",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "tsk_loaddb - populate a SQLite database with metadata from a disk image\n.SH SYNOPSIS\n.B tsk_loaddb [-ahkvV] [ -i\n.I imgtype\n.B ] [ -b\n.I dev_sector_size\n.B ] [ -i\n.I imgtype\n.B ] [ -d\n.I database\n.B ]\n.I image [images]\n.SH DESCRIPTION\n.B tsk_loaddb\nloads disk information from \n.I image\nto a SQLite database.  This database can then be used by tools in other languages for analysis. By default, the database is stored in the same directory as the image with \".db\" appended to the name or the database",
+    "commands": [
+      ".B tsk_loaddb [-ahkvV] [ -i .I imgtype .B ] [ -b .I dev_sector_size .B ] [ -i .I imgtype .B ] [ -d .I database .B ] .I image [images] .SH DESCRIPTION .B tsk_loaddb loads disk information from  .I imag"
+    ],
+    "use_cases": [
+      "加载数据库",
+      "导入证据",
+      "批量分析"
+    ],
+    "examples": [
+      "tsk_loaddb"
+    ],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_tsk_recover",
+    "title": "TSK tsk_recover",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "tsk_recover - Export files from an image into a local directory\n.SH SYNOPSIS\n.B tsk_recover [-vVae] [ -f\n.I fstype\n.B ] [ -i\n.I imgtype\n.B ] [ -b\n.I dev_sector_size\n.B ] [ -o\n.I sector_offset\n.B ] [ -d  \n.I dir_inum\n.B ]\n.I  image [images] output_dir \n.SH DESCRIPTION\n.B tsk_recover\nrecovers files to the\n.I output_dir\nfrom the \n.I image.",
+    "commands": [
+      ".B tsk_recover [-vVae] [ -f .I fstype .B ] [ -i .I imgtype .B ] [ -b .I dev_sector_size .B ] [ -o .I sector_offset .B ] [ -d   .I dir_inum .B ] .I  image [images] output_dir  .SH DESCRIPTION .B tsk_re"
+    ],
+    "use_cases": [
+      "恢复删除文件",
+      "文件恢复",
+      "数据恢复"
+    ],
+    "examples": [
+      "tsk_recover"
+    ],
+    "tips": []
+  },
+  {
+    "knowledge_id": "sleuthkit_usnjls",
+    "title": "TSK usnjls",
+    "category": "磁盘取证",
+    "tool": "sleuthkit",
+    "description": "usnjls \\- List the contents of a NTFS Update Sequence Number journal\n.SH SYNOPSIS\n.B usnjls [-f\n.I fstype\n.B ] [-vV]  [-i imgtype] [-o imgoffset] [-b dev_sector_size]\n.I image [images] [inode]\n\n.SH DESCRIPTION\n.B usnjls\nlists the records in a NTFS Update Sequence Number Journal.",
+    "commands": [
+      ".B usnjls [-f .I fstype .B ] [-vV]  [-i imgtype] [-o imgoffset] [-b dev_sector_size] .I image [images] [inode]  .SH DESCRIPTION .B usnjls lists the records in a NTFS Update Sequence Number Journal."
+    ],
+    "use_cases": [
+      "usnjls \\- List the contents of a NTFS Update Seque"
+    ],
+    "examples": [],
+    "tips": []
+  }
+]

@@ -1,0 +1,116 @@
+[
+  {
+    "case_id": "mitctf-2017_2017_fb158924ea82dbc9",
+    "title": "MIT CTF: gollum-1",
+    "category": "Crypto",
+    "competition": "mitctf-2017",
+    "year": 2017,
+    "difficulty": "easy",
+    "tools_used": [],
+    "techniques": [],
+    "description": "**Category:** **Points:** 100 **Solves:** **Description:** Seems like E Corp is experimenting with a shiny new post-quantum crypto scheme. > Files/Endpoints: > /a9736047cb29cc1c4bb8425adcc842fe.py > gollum.mitctf.com:3301",
+    "solution_steps": [],
+    "key_findings": [],
+    "flags": [],
+    "tags": [
+      "mitctf-2017",
+      "Crypto"
+    ],
+    "content_hash": "fb158924ea82dbc9"
+  },
+  {
+    "case_id": "mitctf-2017_2017_5e8da64c8b6545dd",
+    "title": "MIT CTF: gollum-2",
+    "category": "Crypto",
+    "competition": "mitctf-2017",
+    "year": 2017,
+    "difficulty": "easy",
+    "tools_used": [],
+    "techniques": [],
+    "description": "**Category:** **Points:** 200 **Solves:** **Description:** Seems like E Corp is experimenting with a shiny new post-quantum crypto scheme, maybe they’ve forgotten to protect against all attacks. > Files/Endpoints:",
+    "solution_steps": [],
+    "key_findings": [],
+    "flags": [],
+    "tags": [
+      "mitctf-2017",
+      "Crypto"
+    ],
+    "content_hash": "5e8da64c8b6545dd"
+  },
+  {
+    "case_id": "mitctf-2017_2017_431448cbd527b894",
+    "title": "MIT CTF: recurse",
+    "category": "Misc",
+    "competition": "mitctf-2017",
+    "year": 2017,
+    "difficulty": "easy",
+    "tools_used": [],
+    "techniques": [],
+    "description": "**Category:** **Points:** 200 **Solves:** **Description:** Luckily this compresses very well, but maybe you can recover something from this dump. > Files/Endpoints: > /af0c7e3e3eb3a414ec5a6d8648482172.zip",
+    "solution_steps": [],
+    "key_findings": [],
+    "flags": [],
+    "tags": [
+      "Misc",
+      "mitctf-2017"
+    ],
+    "content_hash": "431448cbd527b894"
+  },
+  {
+    "case_id": "mitctf-2017_2017_29287cfec7a7ed60",
+    "title": "MIT CTF: ronscoffee",
+    "category": "Misc",
+    "competition": "mitctf-2017",
+    "year": 2017,
+    "difficulty": "easy",
+    "tools_used": [],
+    "techniques": [],
+    "description": "**Category:** **Points:** 200 **Solves:** **Description:** Looks like you can scan your coffee mug for some Internet Points (You can give the organizers a coffee cup with an image or link to an image and maybe Ron will get around to scanning it).",
+    "solution_steps": [],
+    "key_findings": [],
+    "flags": [],
+    "tags": [
+      "Misc",
+      "mitctf-2017"
+    ],
+    "content_hash": "29287cfec7a7ed60"
+  },
+  {
+    "case_id": "mitctf-2017_2017_be4e51e3b4580ef1",
+    "title": "MIT CTF: gollum-3",
+    "category": "Crypto",
+    "competition": "mitctf-2017",
+    "year": 2017,
+    "difficulty": "easy",
+    "tools_used": [],
+    "techniques": [],
+    "description": "**Category:** **Points:** 500 **Solves:** **Description:** Seems like E Corp is experimenting with a shiny new post-quantum crypto scheme, though it seems pretty secure (NOTE: THIS CHALLENGE MIGHT BE IMPOSSI- BLE).",
+    "solution_steps": [],
+    "key_findings": [],
+    "flags": [],
+    "tags": [
+      "mitctf-2017",
+      "Crypto"
+    ],
+    "content_hash": "be4e51e3b4580ef1"
+  },
+  {
+    "case_id": "thailand-ctf-2017_2017_629dac67f1c052bb",
+    "title": "Thailand CTF 2017: Crypto_Leak",
+    "category": "Crypto",
+    "competition": "thailand-ctf-2017",
+    "year": 2017,
+    "difficulty": "easy",
+    "tools_used": [],
+    "techniques": [],
+    "description": "**Category: -** **Points: 350** **Solves: TODO** **Description: TODO** (TODO)",
+    "solution_steps": [],
+    "key_findings": [],
+    "flags": [],
+    "tags": [
+      "thailand-ctf-2017",
+      "Crypto"
+    ],
+    "content_hash": "629dac67f1c052bb"
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "name": "volatilityfoundation/volatility3",
+    "description": "Volatility 3.0 development",
+    "stars": 4239,
+    "forks": 675,
+    "language": "Python",
+    "url": "https://github.com/volatilityfoundation/volatility3",
+    "topics": [
+      "digital-investigation",
+      "forensics",
+      "incident-response",
+      "malware",
+      "memory",
+      "python",
+      "ram",
+      "volatility",
+      "volatility-framework"
+    ],
+    "updated_at": "2026-07-12T04:49:34Z"
+  },
+  {
+    "name": "sleuthkit/sleuthkit",
+    "description": "The Sleuth Kit® (TSK) is a library and collection of command line digital forensics tools that allow you to investigate volume and file system data. The library can be incorporated into larger digital forensics tools and the command line tools can be directly used to find evidence. ",
+    "stars": 3108,
+    "forks": 702,
+    "language": "C",
+    "url": "https://github.com/sleuthkit/sleuthkit",
+    "topics": [
+      "forensics",
+      "incident-response",
+      "ntfs",
+      "sleuthkit",
+      "tct"
+    ],
+    "updated_at": "2026-07-08T22:18:09Z"
+  },
+  {
+    "name": "ctfs/write-ups-2017",
+    "description": "Wiki-like CTF write-ups repository, maintained by the community. 2017",
+    "stars": 2149,
+    "forks": 446,
+    "language": "Python",
+    "url": "https://github.com/ctfs/write-ups-2017",
+    "topics": [
+      "ctf"
+    ],
+    "updated_at": "2026-07-10T09:07:52Z"
+  },
+  {
+    "name": "ctfs/write-ups-2015",
+    "description": "Wiki-like CTF write-ups repository, maintained by the community. 2015",
+    "stars": 1997,
+    "forks": 711,
+    "language": "CSS",
+    "url": "https://github.com/ctfs/write-ups-2015",
+    "topics": [],
+    "updated_at": "2026-07-04T10:24:31Z"
+  },
+  {
+    "name": "ctfs/write-ups-2016",
+    "description": "Wiki-like CTF write-ups repository, maintained by the community. 2016",
+    "stars": 1626,
+    "forks": 495,
+    "language": "C",
+    "url": "https://github.com/ctfs/write-ups-2016",
+    "topics": [],
+    "updated_at": "2026-07-11T14:25:04Z"
+  },
+  {
+    "name": "ArsenalRecon/Arsenal-Image-Mounter",
+    "description": "Arsenal Image Mounter mounts the contents of disk images as complete disks in Microsoft Windows.",
+    "stars": 771,
+    "forks": 101,
+    "language": "C#",
+    "url": "https://github.com/ArsenalRecon/Arsenal-Image-Mounter",
+    "topics": [],
+    "updated_at": "2026-07-11T02:31:28Z"
+  },
+  {
+    "name": "vmayoral/robot_hacking_manual",
+    "description": "Robot Hacking Manual (RHM). From robotics to cybersecurity. Papers, notes and writeups from a journey into robot cybersecurity.",
+    "stars": 402,
+    "forks": 56,
+    "language": "TeX",
+    "url": "https://github.com/vmayoral/robot_hacking_manual",
+    "topics": [
+      "ctf",
+      "cyber-security",
+      "cybersecurity",
+      "docker",
+      "forensics",
+      "hacking",
+      "manual",
+      "robot",
+      "robot-cybersecurity",
+      "robot-enumeration",
+      "robot-exploitation",
+      "robot-footprinting",
+      "robotics",
+      "robots",
+      "security",
+      "step-tutorial",
+      "tutorial"
+    ],
+    "updated_at": "2026-07-07T09:36:01Z"
+  },
+  {
+    "name": "ctfs/write-ups-2018",
+    "description": "Wiki-like CTF write-ups repository, maintained by the community. 2018",
+    "stars": 267,
+    "forks": 55,
+    "language": "Shell",
+    "url": "https://github.com/ctfs/write-ups-2018",
+    "topics": [],
+    "updated_at": "2026-03-01T12:38:06Z"
+  },
+  {
+    "name": "Abdowaer098/Wa3r-OffSec-Kit",
+    "description": "🔐 Offensive security knowledge base — 50+ docs covering web exploitation, bug bounty, privilege escalation, CTF writeups, APT emulation, and forensics. Real payloads, real workflows, built from the field.",
+    "stars": 217,
+    "forks": 37,
+    "language": null,
+    "url": "https://github.com/Abdowaer098/Wa3r-OffSec-Kit",
+    "topics": [],
+    "updated_at": "2026-07-07T09:48:55Z"
+  },
+  {
+    "name": "jon-brandy/hackthebox",
+    "description": "My WriteUps for HackTheBox CTFs, Machines, and Sherlocks.",
+    "stars": 195,
+    "forks": 31,
+    "language": "Python",
+    "url": "https://github.com/jon-brandy/hackthebox",
+    "topics": [
+      "binary-exploitation",
+      "ctf",
+      "forensics",
+      "hackthebox-writeups",
+      "htb-machine",
+      "htb-sherlocks",
+      "htb-writeups",
+      "pwn",
+      "reverse-engineering"
+    ],
+    "updated_at": "2026-07-09T18:59:27Z"
+  },
+  {
+    "name": "rishitsaiya/CTFlearn-Writeups",
+    "description": "CTFlearn writeups of all the challenges I have solved. It covers all the domains including Cryptography, Forensics, Reversing, Pwning and other Misc problems.",
+    "stars": 170,
+    "forks": 27,
+    "language": "Python",
+    "url": "https://github.com/rishitsaiya/CTFlearn-Writeups",
+    "topics": [
+      "binary",
+      "cryptography",
+      "ctflearn-writeups",
+      "exploits",
+      "forensics",
+      "miscellaneous",
+      "osint",
+      "penetration-testing",
+      "programming",
+      "reverse-engineering",
+      "web"
+    ],
+    "updated_at": "2026-07-11T02:18:29Z"
+  },
+  {
+    "name": "vivian-dai/PicoCTF2021-Writeup",
+    "description": "Solutions (that we managed to find) for the 2021 PicoCTF",
+    "stars": 170,
+    "forks": 73,
+    "language": "Python",
+    "url": "https://github.com/vivian-dai/PicoCTF2021-Writeup",
+    "topics": [
+      "binary-exploitation",
+      "cryptography",
+      "ctf",
+      "ctf-writeups",
+      "cybersecurity",
+      "forensics",
+      "general-skills",
+      "hacking",
+      "picoctf",
+      "picoctf-writeups",
+      "picoctf2021",
+      "reverse-engineering",
+      "web-exploitation",
+      "writeups"
+    ],
+    "updated_at": "2026-06-21T08:12:33Z"
+  },
+  {
+    "name": "mzfr/HackTheBox-writeups",
+    "description": "Writeups for all the HTB machines I have done",
+    "stars": 63,
+    "forks": 12,
+    "language": "Shell",
+    "url": "https://github.com/mzfr/HackTheBox-writeups",
+    "topics": [
+      "boo2root",
+      "crypto",
+      "ctf",
+      "forensics",
+      "hackthebox",
+      "htb",
+      "ringzer0team",
+      "solutions",
+      "writeups"
+    ],
+    "updated_at": "2026-02-10T19:51:37Z"
+  },
+  {
+    "name": "noamgariani11/picoCTF-2024-Writeup",
+    "description": "picoCTF 2024 Writeup (Capture the Flag Competition) with the solutions for the challenges.",
+    "stars": 57,
+    "forks": 14,
+    "language": null,
+    "url": "https://github.com/noamgariani11/picoCTF-2024-Writeup",
+    "topics": [
+      "ctf",
+      "ctf-events",
+      "ctf-solutions",
+      "ctf-writeups",
+      "forensics",
+      "picoctf",
+      "picoctf-writeups",
+      "picoctf2024",
+      "reverse-engineering"
+    ],
+    "updated_at": "2026-05-29T20:44:17Z"
+  },
+  {
+    "name": "k0imet/CTFs",
+    "description": "A compilation of writeups from past CTFs covering various topics and categories available in CTFs.all levels of skill accounted for ",
+    "stars": 50,
+    "forks": 13,
+    "language": null,
+    "url": "https://github.com/k0imet/CTFs",
+    "topics": [
+      "cryptography",
+      "ctf",
+      "forensics",
+      "mobile",
+      "osint",
+      "pwn",
+      "reversing",
+      "web"
+    ],
+    "updated_at": "2026-04-12T21:54:43Z"
+  },
+  {
+    "name": "tim-barc/ctf_writeups",
+    "description": "This repository contains detailed Capture The Flag (CTF) writeups for challenges completed on CyberDefenders, TryHackMe, BTLO, and more. The writeups are provided in PDF format and cover areas such as digital forensics, malware analysis, network analysis and much more. ",
+    "stars": 43,
+    "forks": 5,
+    "language": null,
+    "url": "https://github.com/tim-barc/ctf_writeups",
+    "topics": [
+      "btlo",
+      "ctfs",
+      "cyber-threat-intelligence",
+      "cybersecurity",
+      "email-analysis",
+      "forensics",
+      "malware-analysis",
+      "memory-analysis",
+      "mobile-forensics",
+      "network-analysis",
+      "pentesting",
+      "reverse-engineering",
+      "tryhackme",
+      "writeups"
+    ],
+    "updated_at": "2026-07-03T16:23:15Z"
+  },
+  {
+    "name": "Prune2000/prune2000.github.io",
+    "description": "My security blog: CTF writeups, pentesting experiments, network forensics, and a long chaotic list of tools. https://prune2000.github.io/",
+    "stars": 37,
+    "forks": 5,
+    "language": "HTML",
+    "url": "https://github.com/Prune2000/prune2000.github.io",
+    "topics": [],
+    "updated_at": "2025-09-28T13:31:23Z"
+  },
+  {
+    "name": "kimbabasaksaksak/KDFC-2023-WriteUp",
+    "description": "KIISC Digital Forensics Challenge 2023 - Kimbabasaksaksak's WriteUp",
+    "stars": 24,
+    "forks": 0,
+    "language": null,
+    "url": "https://github.com/kimbabasaksaksak/KDFC-2023-WriteUp",
+    "topics": [],
+    "updated_at": "2026-02-27T04:28:19Z"
+  },
+  {
+    "name": "DFC-2021-DogeCoin/WriteUp",
+    "description": "KIISC Digital Forensics Challenge 2021 - DogeCoin's WriteUp",
+    "stars": 17,
+    "forks": 0,
+    "language": null,
+    "url": "https://github.com/DFC-2021-DogeCoin/WriteUp",
+    "topics": [
+      "challenge",
+      "digital-forensics-incident-response",
+      "dogecoin",
+      "write-ups"
+    ],
+    "updated_at": "2025-12-09T13:48:40Z"
+  },
+  {
+    "name": "RameenMughal/TryHackMeWriteups",
+    "description": "List of free Try Hack Me Rooms with Notes and Writeups for CTFs categorized with Linux, Web Exploitation, Digital Forensics and more for worldwide Cyber Enthusiasts.",
+    "stars": 14,
+    "forks": 2,
+    "language": "Python",
+    "url": "https://github.com/RameenMughal/TryHackMeWriteups",
+    "topics": [
+      "cryptography",
+      "ctf-writeups",
+      "cybersecurity",
+      "forensics",
+      "linux",
+      "malware-analysis",
+      "networking",
+      "penetration-testing",
+      "reverse-engineering",
+      "scripting",
+      "tryhackme",
+      "web",
+      "windows"
+    ],
+    "updated_at": "2026-07-11T12:16:24Z"
+  },
+  {
+    "name": "0xgbreil/CyberTalents-Digital-Forensics-CTFs",
+    "description": "This repository contains writeups and solutions for all Digital Forensics challenges on the CyberTalents platform.",
+    "stars": 11,
+    "forks": 0,
+    "language": null,
+    "url": "https://github.com/0xgbreil/CyberTalents-Digital-Forensics-CTFs",
+    "topics": [],
+    "updated_at": "2026-04-01T16:08:02Z"
+  },
+  {
+    "name": "DFC-2023-ForensicGPT/writeup",
+    "description": "KIISC Digital Forensics Challenge 2023 - ForensicGPT",
+    "stars": 10,
+    "forks": 0,
+    "language": null,
+    "url": "https://github.com/DFC-2023-ForensicGPT/writeup",
+    "topics": [],
+    "updated_at": "2026-03-05T00:39:21Z"
+  },
+  {
+    "name": "DFC-2022-ISEGYE-IDOL/write-up",
+    "description": "KIISC Digital Forensics Challenge 2022 - ISEGYE_IDOL's WriteUp",
+    "stars": 10,
+    "forks": 1,
+    "language": null,
+    "url": "https://github.com/DFC-2022-ISEGYE-IDOL/write-up",
+    "topics": [
+      "challenge",
+      "digital-forensics-incident-response",
+      "write-ups"
+    ],
+    "updated_at": "2025-10-03T18:32:08Z"
+  },
+  {
+    "name": "garr3ttmjo/Digital-Forensic-Report-Writeups",
+    "description": "Writeups and walkthroughs of computer forensic challenges and ctfs",
+    "stars": 6,
+    "forks": 0,
+    "language": null,
+    "url": "https://github.com/garr3ttmjo/Digital-Forensic-Report-Writeups",
+    "topics": [],
+    "updated_at": "2026-05-01T17:57:18Z"
+  },
+  {
+    "name": "abubakar-shahid/HackTheBox-Sherlocks-Writeups",
+    "description": "A collection of detailed writeups for HTB Sherlock challenges, focusing on Digital Forensics and Incident Response (DFIR). Designed to enhance forensic skills, share knowledge and collaboration.",
+    "stars": 4,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/abubakar-shahid/HackTheBox-Sherlocks-Writeups",
+    "topics": [],
+    "updated_at": "2026-06-26T07:42:31Z"
+  },
+  {
+    "name": "sondt99/UMDCTF_DIGITAL-FORENSICS",
+    "description": "Writeups UMDCTF 2023 - Digital Forensics",
+    "stars": 3,
+    "forks": 0,
+    "language": "Python",
+    "url": "https://github.com/sondt99/UMDCTF_DIGITAL-FORENSICS",
+    "topics": [],
+    "updated_at": "2024-08-12T03:09:43Z"
+  }
+]

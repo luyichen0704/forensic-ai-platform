@@ -1,0 +1,2018 @@
+[
+  {
+    "knowledge_id": "windows_amcache",
+    "title": "windows.amcache",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Extract information on executed applications from the AmCache (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> windows.amcache"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_bigpools",
+    "title": "windows.bigpools",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "List big page pools.",
+    "commands": [
+      "vol -f <memory_dump> windows.bigpools"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_cachedump",
+    "title": "windows.cachedump",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Dumps lsa secrets from memory (deprecated)",
+    "commands": [
+      "vol -f <memory_dump> windows.cachedump"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_callbacks",
+    "title": "windows.callbacks",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists kernel callbacks and notification routines.",
+    "commands": [
+      "vol -f <memory_dump> windows.callbacks"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_cmdline",
+    "title": "windows.cmdline",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists process command line arguments.",
+    "commands": [
+      "vol -f <memory_dump> windows.cmdline"
+    ],
+    "use_cases": [
+      "提取命令行参数",
+      "分析恶意命令"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_cmdscan",
+    "title": "windows.cmdscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Looks for Windows Command History lists",
+    "commands": [
+      "vol -f <memory_dump> windows.cmdscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_consoles",
+    "title": "windows.consoles",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Looks for Windows console buffers",
+    "commands": [
+      "vol -f <memory_dump> windows.consoles"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_crashinfo",
+    "title": "windows.crashinfo",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists the information from a Windows crash dump.",
+    "commands": [
+      "vol -f <memory_dump> windows.crashinfo"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_debugregisters",
+    "title": "windows.debugregisters",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Gathers information related to the debug registers for the given thread\n        Args:\n            ethread: the thread (_ETHREAD) to examine\n        Returns:\n            Tuple[interfaces.objects.ObjectInterface, int, int, int, int, int]: The owner process of the thread and the values for dr7, dr0, dr1, dr2, dr3",
+    "commands": [
+      "vol -f <memory_dump> windows.debugregisters"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_deskscan",
+    "title": "windows.deskscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for the Desktop instances of each Window Station",
+    "commands": [
+      "vol -f <memory_dump> windows.deskscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_desktops",
+    "title": "windows.desktops",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enumerates the Desktop instances of each Window Station",
+    "commands": [
+      "vol -f <memory_dump> windows.desktops"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_devicetree",
+    "title": "windows.devicetree",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Listing tree based on drivers and attached devices in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.devicetree"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_direct_system_calls",
+    "title": "windows.direct_system_calls",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Detects the Direct System Call technique used to bypass EDRs (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> windows.direct_system_calls"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_dlllist",
+    "title": "windows.dlllist",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists the loaded DLLs in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.dlllist"
+    ],
+    "use_cases": [
+      "列出加载的DLL",
+      "检测注入的DLL"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_driverirp",
+    "title": "windows.driverirp",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "List IRPs for drivers in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.driverirp"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_drivermodule",
+    "title": "windows.drivermodule",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Determines if any loaded drivers were hidden by a rootkit (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> windows.drivermodule"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_driverscan",
+    "title": "windows.driverscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for drivers present in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.driverscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_dumpfiles",
+    "title": "windows.dumpfiles",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Dumps cached file contents from Windows memory samples.",
+    "commands": [
+      "vol -f <memory_dump> windows.dumpfiles"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_envars",
+    "title": "windows.envars",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enumerate persistent & common variables.\n\n        This function collects the global (all users) and\n        user-specific environment variables from the\n        registry. Any variables in a process env block that\n        does not exist in the persistent list was explicitly\n        set with the SetEnvironmentVariable() API.",
+    "commands": [
+      "vol -f <memory_dump> windows.envars"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_etwpatch",
+    "title": "windows.etwpatch",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Identifies ETW (Event Tracing for Windows) patching techniques used by malware to evade detection.\n\n    This plugin examines the first opcode of key ETW functions in ntdll.dll and advapi32.dll\n    to detect common ETW bypass techniques such as return pointer manipulation (RET) or function\n    redirection (JMP). Attackers often patch these functions to prevent security tools from\n    receiving telemetry about process execution, API calls, and other system events.",
+    "commands": [
+      "vol -f <memory_dump> windows.etwpatch"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_filescan",
+    "title": "windows.filescan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for file objects present in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.filescan"
+    ],
+    "use_cases": [
+      "扫描文件对象",
+      "恢复删除文件"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_getservicesids",
+    "title": "windows.getservicesids",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Calculate the Service SID",
+    "commands": [
+      "vol -f <memory_dump> windows.getservicesids"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_getsids",
+    "title": "windows.getsids",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Print the SIDs owning each process",
+    "commands": [
+      "vol -f <memory_dump> windows.getsids"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_handles",
+    "title": "windows.handles",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists process open handles.",
+    "commands": [
+      "vol -f <memory_dump> windows.handles"
+    ],
+    "use_cases": [
+      "列出进程句柄",
+      "分析资源访问"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_hashdump",
+    "title": "windows.hashdump",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Dumps user hashes from memory (deprecated)",
+    "commands": [
+      "vol -f <memory_dump> windows.hashdump"
+    ],
+    "use_cases": [
+      "提取密码哈希",
+      "离线密码破解"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_hollowprocesses",
+    "title": "windows.hollowprocesses",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists hollowed processes (deprecated)",
+    "commands": [
+      "vol -f <memory_dump> windows.hollowprocesses"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_iat",
+    "title": "windows.iat",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Extract Import Address Table to list API (functions) used by a program contained in external libraries",
+    "commands": [
+      "vol -f <memory_dump> windows.iat"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_indirect_system_calls",
+    "title": "windows.indirect_system_calls",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Detects the Indirect System Call technique used to bypass EDRs (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> windows.indirect_system_calls"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_info",
+    "title": "windows.info",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Show OS & kernel details of the memory sample being analyzed.",
+    "commands": [
+      "vol -f <memory_dump> windows.info"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_joblinks",
+    "title": "windows.joblinks",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Print process job link information",
+    "commands": [
+      "vol -f <memory_dump> windows.joblinks"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_kpcrs",
+    "title": "windows.kpcrs",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Print KPCR structure for each processor",
+    "commands": [
+      "vol -f <memory_dump> windows.kpcrs"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_ldrmodules",
+    "title": "windows.ldrmodules",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists the loaded modules in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.ldrmodules"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_lsadump",
+    "title": "windows.lsadump",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Dumps lsa secrets from memory (deprecated)",
+    "commands": [
+      "vol -f <memory_dump> windows.lsadump"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_malfind",
+    "title": "windows.malfind",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists process memory ranges that potentially contain injected code (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> windows.malfind"
+    ],
+    "use_cases": [
+      "检测恶意代码注入",
+      "查找隐藏代码"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_mbrscan",
+    "title": "windows.mbrscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for and parses potential Master Boot Records (MBRs)",
+    "commands": [
+      "vol -f <memory_dump> windows.mbrscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_memmap",
+    "title": "windows.memmap",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Prints the memory map",
+    "commands": [
+      "vol -f <memory_dump> windows.memmap"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_mftscan",
+    "title": "windows.mftscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for MFT FILE objects present in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.mftscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_modscan",
+    "title": "windows.modscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for modules present in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.modscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_modules",
+    "title": "windows.modules",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists the loaded kernel modules.",
+    "commands": [
+      "vol -f <memory_dump> windows.modules"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_mutantscan",
+    "title": "windows.mutantscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for mutexes present in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.mutantscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_netscan",
+    "title": "windows.netscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for network objects present in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.netscan"
+    ],
+    "use_cases": [
+      "扫描网络连接",
+      "检测异常连接",
+      "分析C2通信"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_netstat",
+    "title": "windows.netstat",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Traverses network tracking structures present in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.netstat"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_orphan_kernel_threads",
+    "title": "windows.orphan_kernel_threads",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists process threads",
+    "commands": [
+      "vol -f <memory_dump> windows.orphan_kernel_threads"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_pedump",
+    "title": "windows.pedump",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Allows extracting PE Files from a specific address in a specific address space",
+    "commands": [
+      "vol -f <memory_dump> windows.pedump"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_pe_symbols",
+    "title": "windows.pe_symbols",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Interface for PE symbol finding classes\n    This interface provides a standard way for the calling code to\n    lookup symbols by name or address",
+    "commands": [
+      "vol -f <memory_dump> windows.pe_symbols"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_poolscanner",
+    "title": "windows.poolscanner",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Class to maintain the different possible PoolTypes The values must be\n    integer powers of 2.",
+    "commands": [
+      "vol -f <memory_dump> windows.poolscanner"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_privileges",
+    "title": "windows.privileges",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists process token privileges",
+    "commands": [
+      "vol -f <memory_dump> windows.privileges"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_processghosting",
+    "title": "windows.processghosting",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists processes whose DeletePending bit is set or whose FILE_OBJECT is set to 0 or Vads that are DeleteOnClose (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> windows.processghosting"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_pslist",
+    "title": "windows.pslist",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists the processes present in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.pslist"
+    ],
+    "use_cases": [
+      "列出所有进程",
+      "检测恶意进程",
+      "分析进程树"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_psscan",
+    "title": "windows.psscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for processes present in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.psscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_pstree",
+    "title": "windows.pstree",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Plugin for listing processes in a tree based on their parent process ID.",
+    "commands": [
+      "vol -f <memory_dump> windows.pstree"
+    ],
+    "use_cases": [
+      "显示进程父子关系",
+      "分析进程创建链"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_psxview",
+    "title": "windows.psxview",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists all processes found via four of the methods described in \\\"The Art of Memory Forensics\\\" which may help \\\n    identify processes that are trying to hide themselves.\n\n    We recommend using -r pretty if you are looking at this plugin's output in a terminal.\n    deprecated.",
+    "commands": [
+      "vol -f <memory_dump> windows.psxview"
+    ],
+    "use_cases": [
+      "检测进程隐藏",
+      "交叉验证进程列表"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_scheduled_tasks",
+    "title": "windows.scheduled_tasks",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Decodes scheduled task information from the Windows registry, including\n    information about triggers, actions, run times, and creation times (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> windows.scheduled_tasks"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_sessions",
+    "title": "windows.sessions",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "lists Processes with Session information extracted from Environmental Variables",
+    "commands": [
+      "vol -f <memory_dump> windows.sessions"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_shimcachemem",
+    "title": "windows.shimcachemem",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Reads Shimcache entries from the ahcache.sys AVL tree",
+    "commands": [
+      "vol -f <memory_dump> windows.shimcachemem"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_skeleton_key_check",
+    "title": "windows.skeleton_key_check",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Looks for signs of Skeleton Key malware",
+    "commands": [
+      "vol -f <memory_dump> windows.skeleton_key_check"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_ssdt",
+    "title": "windows.ssdt",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists the system call table.",
+    "commands": [
+      "vol -f <memory_dump> windows.ssdt"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_strings",
+    "title": "windows.strings",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Reads output from the strings command and indicates which process(es) each string belongs to.",
+    "commands": [
+      "vol -f <memory_dump> windows.strings"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_suspended_threads",
+    "title": "windows.suspended_threads",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enumerates suspended threads.",
+    "commands": [
+      "vol -f <memory_dump> windows.suspended_threads"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_suspicious_threads",
+    "title": "windows.suspicious_threads",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists suspicious userland process threads (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> windows.suspicious_threads"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_svcdiff",
+    "title": "windows.svcdiff",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Compares services found through list walking versus scanning to find rootkits (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> windows.svcdiff"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_svclist",
+    "title": "windows.svclist",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists services contained with the services.exe doubly linked list of services",
+    "commands": [
+      "vol -f <memory_dump> windows.svclist"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_svcscan",
+    "title": "windows.svcscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for windows services.",
+    "commands": [
+      "vol -f <memory_dump> windows.svcscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_symlinkscan",
+    "title": "windows.symlinkscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for links present in a particular windows memory image.",
+    "commands": [
+      "vol -f <memory_dump> windows.symlinkscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_thrdscan",
+    "title": "windows.thrdscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for windows threads.",
+    "commands": [
+      "vol -f <memory_dump> windows.thrdscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_threads",
+    "title": "windows.threads",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists process threads",
+    "commands": [
+      "vol -f <memory_dump> windows.threads"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_timers",
+    "title": "windows.timers",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Print kernel timers and associated module DPCs",
+    "commands": [
+      "vol -f <memory_dump> windows.timers"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_truecrypt",
+    "title": "windows.truecrypt",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "TrueCrypt Cached Passphrase Finder",
+    "commands": [
+      "vol -f <memory_dump> windows.truecrypt"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_unhooked_system_calls",
+    "title": "windows.unhooked_system_calls",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Detects hooked ntdll.dll stub functions in Windows processes (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> windows.unhooked_system_calls"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_unloadedmodules",
+    "title": "windows.unloadedmodules",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists the unloaded kernel modules.",
+    "commands": [
+      "vol -f <memory_dump> windows.unloadedmodules"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_vadinfo",
+    "title": "windows.vadinfo",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists process memory ranges.",
+    "commands": [
+      "vol -f <memory_dump> windows.vadinfo"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_vadregexscan",
+    "title": "windows.vadregexscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans all virtual memory areas for tasks using RegEx.",
+    "commands": [
+      "vol -f <memory_dump> windows.vadregexscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_vadwalk",
+    "title": "windows.vadwalk",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Walk the VAD tree.",
+    "commands": [
+      "vol -f <memory_dump> windows.vadwalk"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_vadyarascan",
+    "title": "windows.vadyarascan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans all the Virtual Address Descriptor memory maps using yara.",
+    "commands": [
+      "vol -f <memory_dump> windows.vadyarascan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_verinfo",
+    "title": "windows.verinfo",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists version information from PE files.",
+    "commands": [
+      "vol -f <memory_dump> windows.verinfo"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_virtmap",
+    "title": "windows.virtmap",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists virtual mapped sections.",
+    "commands": [
+      "vol -f <memory_dump> windows.virtmap"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_windows",
+    "title": "windows.windows",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enumerates the Windows of Desktop instances",
+    "commands": [
+      "vol -f <memory_dump> windows.windows"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows_windowstations",
+    "title": "windows.windowstations",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for top level Windows Stations",
+    "commands": [
+      "vol -f <memory_dump> windows.windowstations"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "windows___init__",
+    "title": "windows.__init__",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "All core windows plugins.\n\nThese modules should only be imported from volatility3.plugins NOT\nvolatility3.framework.plugins",
+    "commands": [
+      "vol -f <memory_dump> windows.__init__"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_bash",
+    "title": "linux.bash",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "A module containing a plugin that recovers bash command history\nfrom bash process memory.",
+    "commands": [
+      "vol -f <memory_dump> linux.bash"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_boottime",
+    "title": "linux.boottime",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Shows the time the system was started",
+    "commands": [
+      "vol -f <memory_dump> linux.boottime"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_capabilities",
+    "title": "linux.capabilities",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Stores basic information about a task",
+    "commands": [
+      "vol -f <memory_dump> linux.capabilities"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_check_afinfo",
+    "title": "linux.check_afinfo",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Verifies the operation function pointers of network protocols (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> linux.check_afinfo"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_check_creds",
+    "title": "linux.check_creds",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Checks if any processes are sharing credential structures (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> linux.check_creds"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_check_idt",
+    "title": "linux.check_idt",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Checks if the IDT has been altered (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> linux.check_idt"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_check_modules",
+    "title": "linux.check_modules",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Compares module list to sysfs info, if available (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> linux.check_modules"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_check_syscall",
+    "title": "linux.check_syscall",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Check system call table for hooks (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> linux.check_syscall"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_ebpf",
+    "title": "linux.ebpf",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enumerate eBPF programs",
+    "commands": [
+      "vol -f <memory_dump> linux.ebpf"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_elfs",
+    "title": "linux.elfs",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "A module containing a plugin for enumerating memory-mapped\nELF files across all processes.",
+    "commands": [
+      "vol -f <memory_dump> linux.elfs"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_envars",
+    "title": "linux.envars",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists processes with their environment variables",
+    "commands": [
+      "vol -f <memory_dump> linux.envars"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_hidden_modules",
+    "title": "linux.hidden_modules",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Carves memory to find hidden kernel modules (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> linux.hidden_modules"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_iomem",
+    "title": "linux.iomem",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Generates an output similar to /proc/iomem on a running system.",
+    "commands": [
+      "vol -f <memory_dump> linux.iomem"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_ip",
+    "title": "linux.ip",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists network interface information for all devices",
+    "commands": [
+      "vol -f <memory_dump> linux.ip"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_kallsyms",
+    "title": "linux.kallsyms",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Kallsyms symbols enumeration plugin.\n\n    If no arguments are provided, all symbols are included: core, modules, ftrace, and BPF.\n    Alternatively, you can use any combination of --core, --modules, --ftrace, and --bpf\n    to customize the output.",
+    "commands": [
+      "vol -f <memory_dump> linux.kallsyms"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_keyboard_notifiers",
+    "title": "linux.keyboard_notifiers",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Parses the keyboard notifier call chain (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> linux.keyboard_notifiers"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_kmsg",
+    "title": "linux.kmsg",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Kernel log buffer reader",
+    "commands": [
+      "vol -f <memory_dump> linux.kmsg"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_kthreads",
+    "title": "linux.kthreads",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enumerates kthread functions",
+    "commands": [
+      "vol -f <memory_dump> linux.kthreads"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_library_list",
+    "title": "linux.library_list",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enumerate libraries loaded into processes",
+    "commands": [
+      "vol -f <memory_dump> linux.library_list"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_lsmod",
+    "title": "linux.lsmod",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "A module containing a plugin that lists loaded kernel modules.",
+    "commands": [
+      "vol -f <memory_dump> linux.lsmod"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_lsof",
+    "title": "linux.lsof",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "FD user representation, featuring augmented information and formatted fields.\n    This is the data the plugin will eventually display.",
+    "commands": [
+      "vol -f <memory_dump> linux.lsof"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_malfind",
+    "title": "linux.malfind",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists process memory ranges that potentially contain injected code (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> linux.malfind"
+    ],
+    "use_cases": [
+      "检测恶意代码注入",
+      "查找隐藏代码"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_module_extract",
+    "title": "linux.module_extract",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Recreates an ELF file from a specific address in the kernel",
+    "commands": [
+      "vol -f <memory_dump> linux.module_extract"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_modxview",
+    "title": "linux.modxview",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Centralize lsmod, check_modules and hidden_modules results to efficiently \\\nspot modules presence and taints (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> linux.modxview"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_mountinfo",
+    "title": "linux.mountinfo",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists mount points on processes mount namespaces",
+    "commands": [
+      "vol -f <memory_dump> linux.mountinfo"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_netfilter",
+    "title": "linux.netfilter",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists Netfilter hooks (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> linux.netfilter"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_pagecache",
+    "title": "linux.pagecache",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Inode user representation, featuring augmented information and formatted fields.\n    This is the data the plugin will eventually display.",
+    "commands": [
+      "vol -f <memory_dump> linux.pagecache"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_pidhashtable",
+    "title": "linux.pidhashtable",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enumerates processes through the PID hash table",
+    "commands": [
+      "vol -f <memory_dump> linux.pidhashtable"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_proc",
+    "title": "linux.proc",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "A module containing a collection of plugins that produce data typically\nfound in Linux's /proc file system.",
+    "commands": [
+      "vol -f <memory_dump> linux.proc"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_psaux",
+    "title": "linux.psaux",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists processes with their command line arguments",
+    "commands": [
+      "vol -f <memory_dump> linux.psaux"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_pscallstack",
+    "title": "linux.pscallstack",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enumerates the call stack of each task",
+    "commands": [
+      "vol -f <memory_dump> linux.pscallstack"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_pslist",
+    "title": "linux.pslist",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists the processes present in a particular linux memory image.",
+    "commands": [
+      "vol -f <memory_dump> linux.pslist"
+    ],
+    "use_cases": [
+      "列出所有进程",
+      "检测恶意进程",
+      "分析进程树"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_psscan",
+    "title": "linux.psscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enum for linux task exit_state as defined in include/linux/sched.h",
+    "commands": [
+      "vol -f <memory_dump> linux.psscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_pstree",
+    "title": "linux.pstree",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Plugin for listing processes in a tree based on their parent process ID.",
+    "commands": [
+      "vol -f <memory_dump> linux.pstree"
+    ],
+    "use_cases": [
+      "显示进程父子关系",
+      "分析进程创建链"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_ptrace",
+    "title": "linux.ptrace",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enumerates ptrace's tracer and tracee tasks",
+    "commands": [
+      "vol -f <memory_dump> linux.ptrace"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_sockscan",
+    "title": "linux.sockscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans for network connections found in memory layer.",
+    "commands": [
+      "vol -f <memory_dump> linux.sockscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_sockstat",
+    "title": "linux.sockstat",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Handles several socket families extracting the sockets information.",
+    "commands": [
+      "vol -f <memory_dump> linux.sockstat"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_tty_check",
+    "title": "linux.tty_check",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Checks tty devices for hooks (deprecated).",
+    "commands": [
+      "vol -f <memory_dump> linux.tty_check"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_vmaregexscan",
+    "title": "linux.vmaregexscan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans all virtual memory areas for tasks using RegEx.",
+    "commands": [
+      "vol -f <memory_dump> linux.vmaregexscan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_vmayarascan",
+    "title": "linux.vmayarascan",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Scans all virtual memory areas for tasks using yara.",
+    "commands": [
+      "vol -f <memory_dump> linux.vmayarascan"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux_vmcoreinfo",
+    "title": "linux.vmcoreinfo",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enumerate VMCoreInfo tables",
+    "commands": [
+      "vol -f <memory_dump> linux.vmcoreinfo"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "linux___init__",
+    "title": "linux.__init__",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "All core linux plugins.\n\nThese modules should only be imported from volatility3.plugins NOT\nvolatility3.framework.plugins",
+    "commands": [
+      "vol -f <memory_dump> linux.__init__"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_bash",
+    "title": "mac.bash",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "A module containing a collection of plugins that produce data typically\nfound in mac's /proc file system.",
+    "commands": [
+      "vol -f <memory_dump> mac.bash"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_check_syscall",
+    "title": "mac.check_syscall",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Check system call table for hooks.",
+    "commands": [
+      "vol -f <memory_dump> mac.check_syscall"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_check_sysctl",
+    "title": "mac.check_sysctl",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Check sysctl handlers for hooks.",
+    "commands": [
+      "vol -f <memory_dump> mac.check_sysctl"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_check_trap_table",
+    "title": "mac.check_trap_table",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Check mach trap table for hooks.",
+    "commands": [
+      "vol -f <memory_dump> mac.check_trap_table"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_dmesg",
+    "title": "mac.dmesg",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Prints the kernel log buffer.",
+    "commands": [
+      "vol -f <memory_dump> mac.dmesg"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_ifconfig",
+    "title": "mac.ifconfig",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists network interface information for all devices",
+    "commands": [
+      "vol -f <memory_dump> mac.ifconfig"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_kauth_listeners",
+    "title": "mac.kauth_listeners",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists kauth listeners and their status",
+    "commands": [
+      "vol -f <memory_dump> mac.kauth_listeners"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_kauth_scopes",
+    "title": "mac.kauth_scopes",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists kauth scopes and their status",
+    "commands": [
+      "vol -f <memory_dump> mac.kauth_scopes"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_kevents",
+    "title": "mac.kevents",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists event handlers registered by processes",
+    "commands": [
+      "vol -f <memory_dump> mac.kevents"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_list_files",
+    "title": "mac.list_files",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists all open file descriptors for all processes.",
+    "commands": [
+      "vol -f <memory_dump> mac.list_files"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_lsmod",
+    "title": "mac.lsmod",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "A module containing a collection of plugins that produce data typically\nfound in Mac's lsmod command.",
+    "commands": [
+      "vol -f <memory_dump> mac.lsmod"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_lsof",
+    "title": "mac.lsof",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists all open file descriptors for all processes.",
+    "commands": [
+      "vol -f <memory_dump> mac.lsof"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_malfind",
+    "title": "mac.malfind",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists process memory ranges that potentially contain injected code.",
+    "commands": [
+      "vol -f <memory_dump> mac.malfind"
+    ],
+    "use_cases": [
+      "检测恶意代码注入",
+      "查找隐藏代码"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_mount",
+    "title": "mac.mount",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "A module containing a collection of plugins that produce data typically\nfound in Mac's mount command.",
+    "commands": [
+      "vol -f <memory_dump> mac.mount"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_netstat",
+    "title": "mac.netstat",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists all network connections for all processes.",
+    "commands": [
+      "vol -f <memory_dump> mac.netstat"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_proc_maps",
+    "title": "mac.proc_maps",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists process memory ranges that potentially contain injected code.",
+    "commands": [
+      "vol -f <memory_dump> mac.proc_maps"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_psaux",
+    "title": "mac.psaux",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "In-memory artifacts from OSX systems.",
+    "commands": [
+      "vol -f <memory_dump> mac.psaux"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_pslist",
+    "title": "mac.pslist",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists the processes present in a particular mac memory image.",
+    "commands": [
+      "vol -f <memory_dump> mac.pslist"
+    ],
+    "use_cases": [
+      "列出所有进程",
+      "检测恶意进程",
+      "分析进程树"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_pstree",
+    "title": "mac.pstree",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Plugin for listing processes in a tree based on their parent process ID.",
+    "commands": [
+      "vol -f <memory_dump> mac.pstree"
+    ],
+    "use_cases": [
+      "显示进程父子关系",
+      "分析进程创建链"
+    ],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_socket_filters",
+    "title": "mac.socket_filters",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Enumerates kernel socket filters.",
+    "commands": [
+      "vol -f <memory_dump> mac.socket_filters"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_timers",
+    "title": "mac.timers",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Check for malicious kernel timers.",
+    "commands": [
+      "vol -f <memory_dump> mac.timers"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_trustedbsd",
+    "title": "mac.trustedbsd",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Checks for malicious trustedbsd modules",
+    "commands": [
+      "vol -f <memory_dump> mac.trustedbsd"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac_vfsevents",
+    "title": "mac.vfsevents",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "Lists processes that are filtering file system events",
+    "commands": [
+      "vol -f <memory_dump> mac.vfsevents"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "mac___init__",
+    "title": "mac.__init__",
+    "category": "内存取证",
+    "tool": "volatility3",
+    "description": "All core mac plugins.\n\nThese modules should only be imported from volatility3.plugins NOT\nvolatility3.framework.plugins",
+    "commands": [
+      "vol -f <memory_dump> mac.__init__"
+    ],
+    "use_cases": [],
+    "examples": [],
+    "tips": []
+  },
+  {
+    "knowledge_id": "tutorial_linux",
+    "title": "Volatility3 Linux 教程",
+    "category": "内存取证教程",
+    "tool": "volatility3",
+    "description": "Volatility3 linux 内存取证教程",
+    "commands": [
+      "python3 vol.py --help | grep -i linux.",
+      "python3 vol.py -f <path to memory image> <plugin_name> <plugin_option>",
+      "python3 vol.py -f memory.vmem banners",
+      "python3 vol.py -f memory.vmem linux.boottime",
+      "python3 vol.py -f memory.vmem linux.pslist",
+      "python3 vol.py -f memory.vmem linux.pstree",
+      "python3 vol.py -f memory.vmem linux.bash",
+      "python3 vol.py -f memory.vmem linux.ip.Addr",
+      "python3 vol.py -f memory.vmem linux.ip.Link",
+      "python3 vol.py -f memory.vmem linux.malfind"
+    ],
+    "use_cases": [
+      "内存取证入门",
+      "Volatility3使用"
+    ],
+    "examples": [
+      "banners\n~~~~~~~"
+    ],
+    "tips": [
+      "You can also filter and inspect available plugins using more sophisticated patterns or tools like ``grep``, ``awk``, or simply explore the source under ``volatility3/framework/plugins/linux``."
+    ]
+  },
+  {
+    "knowledge_id": "tutorial_mac",
+    "title": "Volatility3 Mac 教程",
+    "category": "内存取证教程",
+    "tool": "volatility3",
+    "description": "Volatility3 mac 内存取证教程",
+    "commands": [
+      "python3 vol.py --help | grep -i mac. | head -n 4",
+      "python3 vol.py -f <path to memory image> <plugin_name> <plugin_option>",
+      "python3 vol.py -f contact_me banners.Banners",
+      "python3 vol.py -f contact_me mac.pslist.PsList",
+      "python3 vol.py -f contact_me mac.pstree.PsTree",
+      "python3 vol.py -f contact_me mac.ifconfig.Ifconfig"
+    ],
+    "use_cases": [
+      "内存取证入门",
+      "Volatility3使用"
+    ],
+    "examples": [
+      "banners\n~~~~~~~"
+    ],
+    "tips": [
+      "Here the command is piped to grep and head to provide the start of the list of macOS plugins."
+    ]
+  },
+  {
+    "knowledge_id": "tutorial_windows",
+    "title": "Volatility3 Windows 教程",
+    "category": "内存取证教程",
+    "tool": "volatility3",
+    "description": "Volatility3 windows 内存取证教程",
+    "commands": [
+      "python3 vol.py --help | grep windows | head -n 4",
+      "python3 vol.py -f <path to memory image> plugin_name plugin_option",
+      "python3 vol.py -f MemDump.DMP windows.pslist | head -n 10",
+      "python3 vol.py -f MemDump.DMP windows.pstree | head -n 20",
+      "python3 vol.py -f MemDump.DMP windows.hashdump"
+    ],
+    "use_cases": [
+      "内存取证入门",
+      "Volatility3使用"
+    ],
+    "examples": [
+      "windows.pslist\n~~~~~~~~~~~~~~"
+    ],
+    "tips": [
+      "Here the command is piped to grep and head to provide the start of a list of the available windows plugins.",
+      "Here the command is piped to head to provide smaller output, here listing only the first 20."
+    ]
+  }
+]

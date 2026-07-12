@@ -1,0 +1,129 @@
+[
+  {
+    "name": "Prune2000/prune2000.github.io",
+    "description": "My security blog: CTF writeups, pentesting experiments, network forensics, and a long chaotic list of tools. https://prune2000.github.io/",
+    "stars": 37,
+    "forks": 5,
+    "language": "HTML",
+    "url": "https://github.com/Prune2000/prune2000.github.io",
+    "topics": [],
+    "updated_at": "2025-09-28T13:31:23Z",
+    "type": "search"
+  },
+  {
+    "name": "Stuocs/stuocs.github.io",
+    "description": "cybersecurity pentesting ctf-writeups oscp ethical-hacking malware-analysis tryhackme hackthebox active-directory jekyll-blog",
+    "stars": 3,
+    "forks": 0,
+    "language": "Shell",
+    "url": "https://github.com/Stuocs/stuocs.github.io",
+    "topics": [
+      "active-directory",
+      "blue-team",
+      "chirpy-theme",
+      "ctf-writeups",
+      "cybersecurity",
+      "ethical-hacking",
+      "hackthebox",
+      "jekyll-blog",
+      "linux",
+      "malware-analysis",
+      "oscp",
+      "pentesting",
+      "pentesting-tools",
+      "red-team",
+      "the-hacker-labs",
+      "tryhackme"
+    ],
+    "updated_at": "2026-04-29T17:07:33Z",
+    "type": "search"
+  },
+  {
+    "name": "HackerUmair/-Security-research-blog",
+    "description": "A personal cybersecurity research space by UmairSec — sharing insights, writeups, and discoveries in ethical hacking, penetration testing, and digital forensics.",
+    "stars": 1,
+    "forks": 0,
+    "language": null,
+    "url": "https://github.com/HackerUmair/-Security-research-blog",
+    "topics": [],
+    "updated_at": "2025-12-07T02:10:13Z",
+    "type": "search"
+  },
+  {
+    "name": "Varmillo7/Blog-Writeups",
+    "description": "This repository consists of blogs regarding cyber security, digital forensics, Incident Response and much more!",
+    "stars": 0,
+    "forks": 0,
+    "language": null,
+    "url": "https://github.com/Varmillo7/Blog-Writeups",
+    "topics": [],
+    "updated_at": "2026-02-04T09:34:18Z",
+    "type": "search"
+  },
+  {
+    "name": "Manalx0/digital-forensics-writeups",
+    "description": "DFIR-oriented CTF write-ups covering disk, memory, and artifact-based analysis using various tools and techniques",
+    "stars": 0,
+    "forks": 0,
+    "language": null,
+    "url": "https://github.com/Manalx0/digital-forensics-writeups",
+    "topics": [
+      "ctf-challenges",
+      "cybersecurity",
+      "dfir",
+      "digital-forensics",
+      "disk-forensics",
+      "file-analysis",
+      "incident-response",
+      "kali-linux",
+      "memory-forensics",
+      "sleuthkit"
+    ],
+    "updated_at": "2026-03-30T09:09:01Z",
+    "type": "search"
+  },
+  {
+    "name": "inor-w/dfir-case-studies",
+    "description": "A curated collection of sanitized DFIR case studies and lab writeups by the examiner, showcasing memory + disk forensics workflows (Volatility 3, Autopsy), Windows artifact analysis, timelines, and professional reporting—no evidence images, malware samples, or sensitive identifiers included.",
+    "stars": 0,
+    "forks": 0,
+    "language": null,
+    "url": "https://github.com/inor-w/dfir-case-studies",
+    "topics": [],
+    "updated_at": "2025-12-18T17:46:31Z",
+    "type": "search"
+  },
+  {
+    "name": "bovisdeus/MalwareRE",
+    "description": "Blog for writeups on malware analysis",
+    "stars": 0,
+    "forks": 0,
+    "language": null,
+    "url": "https://github.com/bovisdeus/MalwareRE",
+    "topics": [],
+    "updated_at": "2025-07-09T21:17:51Z",
+    "type": "search"
+  },
+  {
+    "name": "0xkohi/0xkohi.github.io",
+    "description": "Blog | malware analysis/writeups",
+    "stars": 0,
+    "forks": 0,
+    "language": "HTML",
+    "url": "https://github.com/0xkohi/0xkohi.github.io",
+    "topics": [],
+    "updated_at": "2025-07-06T21:24:07Z",
+    "type": "search"
+  },
+  {
+    "name": "saiyarra123/Cyber-Security-Analyst-Portfolio",
+    "description": "cybersecurity-analyst-portfolio/ ├── README.md ├── resume.pdf ├── projects/ │   ├── network-traffic-analysis/ │   │   ├── README.md │   │   └── screenshots/ │   ├── log-analysis-splunk/ │   ├── vulnerability-assessment/ │   ├── malware-traffic-analysis/ │   └── ctf-writeups/ └── blog/     ├── how-to-use-wireshark.md     ├── detecting-brute-force.md",
+    "stars": 0,
+    "forks": 0,
+    "language": null,
+    "url": "https://github.com/saiyarra123/Cyber-Security-Analyst-Portfolio",
+    "topics": [],
+    "updated_at": "2025-04-20T10:48:47Z",
+    "type": "search"
+  }
+]
