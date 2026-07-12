@@ -176,6 +176,9 @@ class Installer:
             messagebox.showerror("Error", str(e))
         finally:
             self.root.after(0, lambda: self.install_btn.configure(state='normal'))
+    
+    def run(self):
+        self.root.mainloop()
 
 if __name__ == "__main__":
     Installer().run()
