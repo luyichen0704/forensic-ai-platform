@@ -1,0 +1,74 @@
+﻿python : C:\Users\luyic\AppData\Local\Programs\Python\Python313\Lib\site-packages\requests\__init__.py:113: RequestsDep
+endencyWarning: urllib3 (2.5.0) or chardet (7.4.3)/charset_normalizer (2.0.12) doesn't match a supported version!
+所在位置 行:1 字符: 1
++ python scripts/search_more_writeups.py 2>&1 | Out-File -FilePath "E:\ ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\luyic\...ported version!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  warnings.warn(
+============================================================
+搜索CTF和取证Writeup仓库
+============================================================
+
+[1/15] 搜索: CTF writeup forensics
+  找到 5 个仓库
+
+[2/15] 搜索: CTF writeup misc
+  找到 5 个仓库
+
+[3/15] 搜索: CTF writeup crypto
+  找到 5 个仓库
+
+[4/15] 搜索: CTF writeup reverse
+  找到 5 个仓库
+
+[5/15] 搜索: CTF writeup pwn
+  找到 5 个仓库
+
+[6/15] 搜索: CTF writeup web
+  找到 5 个仓库
+
+[7/15] 搜索: digital forensics writeup
+  找到 5 个仓库
+
+[8/15] 搜索: memory forensics writeup
+  找到 5 个仓库
+
+[9/15] 搜索: disk forensics writeup
+  找到 2 个仓库
+
+[10/15] 搜索: network forensics PCAP
+  找到 5 个仓库
+
+[11/15] 搜索: malware analysis writeup
+  找到 0 个仓库
+
+[12/15] 搜索: incident response writeup
+  找到 0 个仓库
+
+[13/15] 搜索: DFIR writeup
+  找到 0 个仓库
+
+[14/15] 搜索: 电子取证 writeup
+  找到 0 个仓库
+
+[15/15] 搜索: 取证 CTF
+  找到 0 个仓库
+
+获取已知仓库信息...
+
+共找到 40 个仓库
+Traceback (most recent call last):
+  File "E:\forensic-ai-platform\scripts\search_more_writeups.py", line 324, in <module>
+    main()
+    ~~~~^^
+  File "E:\forensic-ai-platform\scripts\search_more_writeups.py", line 321, in main
+    searcher.save_results()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "E:\forensic-ai-platform\scripts\search_more_writeups.py", line 256, in save_results
+    categories = self.categorize_repos()
+  File "E:\forensic-ai-platform\scripts\search_more_writeups.py", line 227, in categorize_repos
+    desc = repo.get("description", "").lower()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lower'
