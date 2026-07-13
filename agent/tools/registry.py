@@ -22,7 +22,7 @@ class ToolCategory(Enum):
     CRYPTO = "crypto"
     STEGO = "stego"
     REVERSE = "reverse"
-    SYSTEM = system"
+    SYSTEM = "system"
     ENCODING = "encoding"
 
 @dataclass
