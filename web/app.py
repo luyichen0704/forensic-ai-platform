@@ -60,11 +60,7 @@ class ForensicWebUI:
         .status-error { color: #f44336; }
         """
         
-        with gr.Blocks(
-            title="🔍 基于大模型的自动化取证平台",
-            theme=gr.themes.Soft(),
-            css=custom_css
-        ) as ui:
+        with gr.Blocks(title="Forensic AI Platform") as ui:
             
             # ==================== 页面标题 ====================
             gr.HTML("""
@@ -82,9 +78,7 @@ class ForensicWebUI:
                         with gr.Column(scale=3):
                             chatbot = gr.Chatbot(
                                 label="取证对话",
-                                height=500,
-                                show_copy_button=True,
-                                avatar_images=(None, "https://em-content.zobj.net/source/twitter/408/robot_1f916.png")
+                                height=500
                             )
                             
                             with gr.Row():
