@@ -378,7 +378,7 @@ class ForensicWebUI:
 """
                 return "工具未找到"
             
-            tool_select.change(show_tool_info, outputs=tool_info)
+            tool_select.change(show_tool_info, inputs=[tool_select], outputs=[tool_info])
             
             # API预设选择处理
             def apply_preset(preset):
@@ -599,6 +599,5 @@ if __name__ == "__main__":
     app.launch(
         server_name="0.0.0.0",
         server_port=7860,
-        share=False,
-        show_api=True
+        share=False
     )
