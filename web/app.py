@@ -78,13 +78,27 @@ class ForensicWebUI:
                         with gr.Column(scale=3):
                             chatbot = gr.Chatbot(
                                 label="取证对话",
-                                height=500
+                                height=400
                             )
+                            
+                            # 文件上传区域
+                            with gr.Row():
+                                evidence_file = gr.File(
+                                    label="📁 上传检材文件 (E01/PCAP/MEM等)",
+                                    file_types=[".E01", ".raw", ".dd", ".pcap", ".pcapng", ".mem", ".apk", ".exe", ".bin"],
+                                    type="filepath"
+                                )
+                                evidence_info = gr.Textbox(
+                                    label="检材信息",
+                                    lines=2,
+                                    interactive=False,
+                                    placeholder="上传文件后自动显示信息..."
+                                )
                             
                             with gr.Row():
                                 msg_input = gr.Textbox(
                                     label="输入问题",
-                                    placeholder="描述你的取证任务，例如：分析E01磁盘镜像，找出删除的文件",
+                                    placeholder="上传检材后，输入问题，例如：找出删除的文件",
                                     lines=2,
                                     scale=4
                                 )
@@ -319,13 +333,26 @@ class ForensicWebUI:
                 # 异步执行分析
                 async def run_analysis():
                     try:
-                        # 检查是否包含证据路径
-                        evidence_path = self._extract_evidence_path(message)
-                        
-                        if evidence_path:
-                            result = await self.agent.analyze(message, evidence_path)
-                            response = self._format_analysis_result(result)
+                        # 使用上传的文件
+                        if evidence_path and os.path.exists(evidence_path):
+                            # 先用取证工具提取信息
+                            extracted_info = self._extract_evidence_info(evidence_path)
+                            
+                            # 构建包含提取信息的提示
+                            enhanced_message = f"""基于以下检材分析结果回答问题：
+
+【检材文件】: {os.path.basename(evidence_path)}
+
+【提取的关键信息】:
+{extracted_info}
+
+【用户问题】: {message}
+
+请根据以上信息，用中文详细回答用户的问题。"""
+                            
+                            response = await self._chat_with_llm(enhanced_message, history)
                         else:
+                            # 没有文件，普通对话
                             response = await self._chat_with_llm(message, history)
                         
                         return response
@@ -340,8 +367,37 @@ class ForensicWebUI:
                 history[-1] = (message, response)
                 return "", history
             
-            send_btn.click(chat, [msg_input, chatbot], [msg_input, chatbot])
-            msg_input.submit(chat, [msg_input, chatbot], [msg_input, chatbot])
+            # 文件上传时显示信息
+            def on_file_upload(file):
+                """文件上传时的处理"""
+                if file is None:
+                    return "等待上传文件..."
+                
+                try:
+                    file_path = file.name if hasattr(file, 'name') else file
+                    file_size = os.path.getsize(file_path)
+                    file_name = os.path.basename(file_path)
+                    
+                    info = f"📁 {file_name}\n"
+                    info += f"📏 大小: {file_size / 1024 / 1024:.2f} MB\n"
+                    info += f"📂 路径: {file_path}"
+                    
+                    return info
+                except Exception as e:
+                    return f"文件信息: {str(e)}"
+            
+            evidence_file.change(on_file_upload, inputs=evidence_file, outputs=evidence_info)
+            
+            send_btn.click(
+                chat, 
+                [msg_input, chatbot, evidence_file], 
+                [msg_input, chatbot]
+            )
+            msg_input.submit(
+                chat, 
+                [msg_input, chatbot, evidence_file], 
+                [msg_input, chatbot]
+            )
             clear_btn.click(lambda: [], outputs=chatbot)
             
             # 工具管理
@@ -564,6 +620,140 @@ class ForensicWebUI:
             output.append(result["summary"])
         
         return "\n".join(output)
+    
+    def _extract_evidence_info(self, evidence_path: str) -> str:
+        """使用取证工具提取文件信息"""
+        import subprocess
+        
+        info_parts = []
+        file_ext = os.path.splitext(evidence_path)[1].lower()
+        
+        try:
+            # 1. 基本文件信息
+            info_parts.append("【文件基本信息】")
+            
+            # 文件大小
+            file_size = os.path.getsize(evidence_path)
+            if file_size > 1024*1024*1024:
+                info_parts.append(f"- 大小: {file_size/1024/1024/1024:.2f} GB")
+            elif file_size > 1024*1024:
+                info_parts.append(f"- 大小: {file_size/1024/1024:.2f} MB")
+            else:
+                info_parts.append(f"- 大小: {file_size/1024:.2f} KB")
+            
+            # 使用file命令识别类型
+            try:
+                result = subprocess.run(
+                    ["file", evidence_path],
+                    capture_output=True, text=True, timeout=10
+                )
+                if result.returncode == 0:
+                    info_parts.append(f"- 类型: {result.stdout.strip()}")
+            except:
+                info_parts.append(f"- 扩展名: {file_ext}")
+            
+            info_parts.append("")
+            
+            # 2. 根据文件类型使用不同工具提取信息
+            if file_ext in ['.pcap', '.pcapng']:
+                info_parts.append("【网络流量分析】")
+                try:
+                    # 使用tshark提取基本信息
+                    result = subprocess.run(
+                        ["tshark", "-r", evidence_path, "-q", "-z", "io,phs"],
+                        capture_output=True, text=True, timeout=30
+                    )
+                    if result.returncode == 0:
+                        info_parts.append(result.stdout[:2000])
+                except:
+                    info_parts.append("(tshark未安装或分析失败)")
+                
+                # 提取IP统计
+                try:
+                    result = subprocess.run(
+                        ["tshark", "-r", evidence_path, "-q", "-z", "conv,ip"],
+                        capture_output=True, text=True, timeout=30
+                    )
+                    if result.returncode == 0:
+                        info_parts.append("\n【IP会话统计】")
+                        info_parts.append(result.stdout[:1500])
+                except:
+                    pass
+            
+            elif file_ext in ['.E01', '.raw', '.dd', '.img']:
+                info_parts.append("【磁盘镜像分析】")
+                try:
+                    # 使用file命令
+                    result = subprocess.run(
+                        ["file", evidence_path],
+                        capture_output=True, text=True, timeout=10
+                    )
+                    if result.returncode == 0:
+                        info_parts.append(result.stdout)
+                except:
+                    pass
+            
+            elif file_ext in ['.mem', '.raw']:
+                info_parts.append("【内存转储分析】")
+                info_parts.append("(需要使用Volatility分析)")
+            
+            elif file_ext == '.apk':
+                info_parts.append("【APK分析】")
+                try:
+                    # 使用aapt获取APK信息
+                    result = subprocess.run(
+                        ["aapt", "dump", "badging", evidence_path],
+                        capture_output=True, text=True, timeout=10
+                    )
+                    if result.returncode == 0:
+                        info_parts.append(result.stdout[:1500])
+                except:
+                    info_parts.append("(aapt未安装)")
+            
+            # 3. 提取字符串（通用）
+            info_parts.append("\n【关键字符串提取】")
+            try:
+                result = subprocess.run(
+                    ["strings", "-n", "8", evidence_path],
+                    capture_output=True, text=True, timeout=15
+                )
+                if result.returncode == 0:
+                    # 过滤和提取关键信息
+                    strings_output = result.stdout
+                    # 提取URL
+                    import re
+                    urls = re.findall(r'https?://[^\s<>"]+', strings_output)
+                    if urls:
+                        info_parts.append("发现的URL:")
+                        for url in list(set(urls))[:10]:
+                            info_parts.append(f"  - {url}")
+                    
+                    # 提取IP地址
+                    ips = re.findall(r'\b(?:\d{1,3}\.){3}\d{1,3}\b', strings_output)
+                    if ips:
+                        info_parts.append("发现的IP地址:")
+                        for ip in list(set(ips))[:10]:
+                            info_parts.append(f"  - {ip}")
+                    
+                    # 提取可能的密码/密钥
+                    key_patterns = [
+                        r'(?i)password[:=]\s*(\S+)',
+                        r'(?i)key[:=]\s*(\S+)',
+                        r'(?i)secret[:=]\s*(\S+)',
+                    ]
+                    for pattern in key_patterns:
+                        matches = re.findall(pattern, strings_output)
+                        if matches:
+                            info_parts.append("可能的敏感信息:")
+                            for m in matches[:5]:
+                                info_parts.append(f"  - {m[:30]}...")
+            except:
+                info_parts.append("(strings命令执行失败)")
+            
+        except Exception as e:
+            info_parts.append(f"提取信息时出错: {str(e)}")
+        
+        return "\n".join(info_parts)
     
     async def _chat_with_llm(self, message: str, history: list) -> str:
         """与LLM对话"""
