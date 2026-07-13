@@ -5,6 +5,7 @@ Every step checks prerequisites
 """
 import os
 import sys
+import shutil
 import subprocess
 import tkinter as tk
 from tkinter import messagebox, filedialog
@@ -286,7 +287,6 @@ class Installer:
             config_file = os.path.join(p, "config", "llm_config.json")
             
             if os.path.exists(config_example) and not os.path.exists(config_file):
-                import shutil
                 shutil.copy2(config_example, config_file)
                 self.log_msg("  ✓ Config created from template")
                 self.log_msg("  ⚠ Edit config/llm_config.json to add your API key")
