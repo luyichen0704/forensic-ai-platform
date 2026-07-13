@@ -322,26 +322,27 @@ class ForensicWebUI:
             # ==================== 事件绑定 ====================
             
             # 聊天功能
-            def chat(message, history):
+            def chat(message, history, evidence_file=None):
                 """处理聊天消息"""
                 if not message:
                     return "", history
                 
                 # 添加用户消息
-                history.append((message, None))
+                history.append({"role": "user", "content": message})
                 
                 # 异步执行分析
                 async def run_analysis():
                     try:
                         # 使用上传的文件
-                        if evidence_path and os.path.exists(evidence_path):
+                        evidence_path = evidence_file
+                        if evidence_path and os.path.exists(str(evidence_path)):
                             # 先用取证工具提取信息
-                            extracted_info = self._extract_evidence_info(evidence_path)
+                            extracted_info = self._extract_evidence_info(str(evidence_path))
                             
                             # 构建包含提取信息的提示
                             enhanced_message = f"""基于以下检材分析结果回答问题：
 
-【检材文件】: {os.path.basename(evidence_path)}
+【检材文件】: {os.path.basename(str(evidence_path))}
 
 【提取的关键信息】:
 {extracted_info}
@@ -364,7 +365,7 @@ class ForensicWebUI:
                 response = loop.run_until_complete(run_analysis())
                 loop.close()
                 
-                history[-1] = (message, response)
+                history.append({"role": "assistant", "content": response})
                 return "", history
             
             # 文件上传时显示信息
@@ -774,11 +775,14 @@ class ForensicWebUI:
         messages = [{"role": "system", "content": system_prompt}]
         
         # 添加历史消息
-        for user_msg, bot_msg in history[-5:]:
-            if user_msg:
-                messages.append({"role": "user", "content": user_msg})
-            if bot_msg:
-                messages.append({"role": "assistant", "content": bot_msg})
+        for msg in history[-5:]:
+            if isinstance(msg, dict):
+                messages.append(msg)
+            elif isinstance(msg, (list, tuple)) and len(msg) == 2:
+                if msg[0]:
+                    messages.append({"role": "user", "content": msg[0]})
+                if msg[1]:
+                    messages.append({"role": "assistant", "content": msg[1]})
         
         messages.append({"role": "user", "content": message})
         
